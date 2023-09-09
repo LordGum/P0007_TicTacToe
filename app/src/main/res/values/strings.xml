@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Tic tac toe</string>
+    <string name="start">Начать</string>
+    <string name="new_game">Новая игра</string>
+    <string name="settings">Настройки</string>
+    <string name="continue_game">Продолжить игру</string>
+    <string name="sound">Звук</string>
+    <string name="level">Сложность</string>
+    <string name="easy">Легко</string>
+    <string name="rules_of_game">Правила игры</string>
+    <string name="vertical_row">Ряд по вертикали</string>
+    <string name="horizontal_row">Ряд по горизонтали</string>
+    <string name="diagonal_row">Ряд по диагонали</string>
 </resources>
