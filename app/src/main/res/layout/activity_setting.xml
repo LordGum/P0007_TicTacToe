@@ -105,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@id/previous_set" />
 
     <CheckBox
-        android:id="@+id/checkBox_set"
+        android:id="@+id/checkBox1_set"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -133,7 +133,7 @@
         android:textColor="@color/brown"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox_set" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox1_set" />
 
     <CheckBox
         android:id="@+id/checkBox3_set"

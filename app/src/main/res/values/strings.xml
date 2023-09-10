@@ -17,4 +17,6 @@
     <string name="Menu">Меню</string>
     <string name="win_text">Вы выиграли</string>
     <string name="ok">ОК</string>
+    
+    <string name="preference_file_key">tic_tac_toe.file_key</string>
 </resources>
