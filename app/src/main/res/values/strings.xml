@@ -11,4 +11,10 @@
     <string name="vertical_row">Ряд по вертикали</string>
     <string name="horizontal_row">Ряд по горизонтали</string>
     <string name="diagonal_row">Ряд по диагонали</string>
+    <string name="backTo">Вернуться</string>
+    <string name="setting">Настройки</string>
+    <string name="save_and_go">Сохратинь и выйти</string>
+    <string name="Menu">Меню</string>
+    <string name="win_text">Вы выиграли</string>
+    <string name="ok">ОК</string>
 </resources>
