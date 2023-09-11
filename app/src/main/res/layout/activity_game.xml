@@ -22,7 +22,7 @@
         app:tint="@color/white" />
 
     <ImageView
-        android:id="@+id/cross_game2"
+        android:id="@+id/menu_game"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
@@ -36,7 +36,7 @@
         app:tint="@color/white" />
 
     <Chronometer
-        android:id="@+id/chronometr"
+        android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -44,7 +44,7 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/cross_game"
-        app:layout_constraintEnd_toStartOf="@+id/cross_game2"
+        app:layout_constraintEnd_toStartOf="@+id/menu_game"
         app:layout_constraintStart_toEndOf="@+id/cross_game"
         app:layout_constraintTop_toTopOf="@+id/cross_game" />
 
@@ -63,97 +63,170 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cross_game">
 
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/cross" />
+            tools:srcCompat="@drawable/cross" />
 
+
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@id/imageView1"
+            app:layout_constraintTop_toTopOf="parent"/>
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintStart_toEndOf="@id/imageView1"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/cross" />
+            tools:srcCompat="@drawable/cross" />
 
+
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView2"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/cross" />
+            tools:srcCompat="@drawable/cross" />
 
+
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView1" />
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageView1"
-            app:srcCompat="@drawable/cross" />
+            tools:srcCompat="@drawable/cross" />
 
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@id/imageView4"
+            app:layout_constraintTop_toBottomOf="@id/imageView2" />
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintStart_toEndOf="@id/imageView4"
             app:layout_constraintTop_toBottomOf="@id/imageView2"
-            app:srcCompat="@drawable/cross" />
+            tools:srcCompat="@drawable/cross" />
 
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView5"
             app:layout_constraintTop_toBottomOf="@id/imageView3"
-            app:srcCompat="@drawable/cross" />
-
+            tools:srcCompat="@drawable/cross" />
         <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/imageView6"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView5"
+            app:layout_constraintTop_toBottomOf="@id/imageView3"
+            tools:srcCompat="@drawable/cross" />
+
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imageView4"
-            app:srcCompat="@drawable/cross" />
-
+            tools:srcCompat="@drawable/cross" />
         <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/imageView7"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            tools:srcCompat="@drawable/cross" />
+
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintStart_toEndOf="@id/imageView7"
             app:layout_constraintTop_toBottomOf="@id/imageView5"
-            app:srcCompat="@drawable/cross" />
-
+            tools:srcCompat="@drawable/cross" />
         <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/imageView8"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@id/imageView7"
+            app:layout_constraintTop_toBottomOf="@id/imageView5"
+            tools:srcCompat="@drawable/cross" />
+
+        <TextView
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:layout_margin="1dp"
             android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageView8"
             app:layout_constraintTop_toBottomOf="@id/imageView6"
-            app:srcCompat="@drawable/cross" />
+            tools:srcCompat="@drawable/cross" />
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_margin="1dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageView8"
+            app:layout_constraintTop_toBottomOf="@id/imageView6"
+            tools:srcCompat="@drawable/cross" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

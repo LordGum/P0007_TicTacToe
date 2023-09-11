@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/yellow"
-    tools:context=".SettingActivity">
+    tools:context=".SettingsActivity">
 
     <TextView
         android:id="@+id/SettingsLable_set"
@@ -39,7 +39,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:progress="55"
+        android:progress="50"
         android:progressDrawable="@drawable/style_seekbar"
         android:splitTrack="false"
         android:thumb="@drawable/ic_thumb"
@@ -105,13 +105,12 @@
         app:layout_constraintTop_toBottomOf="@id/previous_set" />
 
     <CheckBox
-        android:id="@+id/checkBox1_set"
+        android:id="@+id/checkBoxVertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:button="@drawable/style_checkbox"
-        android:checked="true"
         android:fontFamily="@font/roboto_medium"
         android:padding="8dp"
         android:text="@string/vertical_row"
@@ -121,7 +120,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rules_set" />
 
     <CheckBox
-        android:id="@+id/checkBox2_set"
+        android:id="@+id/checkBoxHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -133,10 +132,10 @@
         android:textColor="@color/brown"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox1_set" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxVertical" />
 
     <CheckBox
-        android:id="@+id/checkBox3_set"
+        android:id="@+id/checkBoxDiagonal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -148,7 +147,7 @@
         android:textColor="@color/brown"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2_set" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxHorizontal" />
 
     <TextView
         android:id="@+id/back_button_set"
@@ -163,7 +162,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3_set" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDiagonal" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
