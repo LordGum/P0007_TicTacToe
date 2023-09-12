@@ -3,6 +3,7 @@ package com.example.tictactoe
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.tictactoe.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -35,8 +36,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun getInfoAboutLastGame() : GameInfo {
         with(getSharedPreferences("game", MODE_PRIVATE)){
-            val time = getLong("time", 0)
-            val gameField = getString("gameField", "")
+            val time = getLong(GameActivity.PREF_TIME, 0)
+            val gameField = getString(GameActivity.PREF_GAME_FIELD, "")
+
+            Log.d("MY_TAG", time.toString())
 
             return if (gameField != null) {
                 GameInfo(time, gameField)
@@ -51,6 +54,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_TIME = "my.tick_tac_toe.TIME"
         const val EXTRA_GAME_FIELD = "my.tick_tac_toe.GAME_FIELD"
+
     }
 
 }

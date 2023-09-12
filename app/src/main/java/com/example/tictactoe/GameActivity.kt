@@ -2,7 +2,6 @@ package com.example.tictactoe
 
 import android.app.Dialog
 import android.content.Intent
-import android.content.Intent.EXTRA_TIME
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.media.MediaPlayer
@@ -14,7 +13,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tictactoe.MainActivity.Companion.EXTRA_GAME_FIELD
 import com.example.tictactoe.SettingsActivity.Companion.PREF_LEVEL
 import com.example.tictactoe.SettingsActivity.Companion.PREF_RULES
 import com.example.tictactoe.SettingsActivity.Companion.PREF_SOUND
@@ -80,8 +78,8 @@ class GameActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        val time = intent.getLongExtra(EXTRA_TIME, 0L)
-        val gameField = intent.getStringExtra(EXTRA_GAME_FIELD)
+        val time = intent.getLongExtra(MainActivity.EXTRA_TIME, 0L)
+        val gameField = intent.getStringExtra(MainActivity.EXTRA_GAME_FIELD)
 
         if (gameField != null && time != 0L && gameField != "") {
             restartGame(time, gameField)
@@ -157,8 +155,8 @@ class GameActivity : AppCompatActivity() {
 
     private fun saveGame(time: Long, gameField: String) {
         getSharedPreferences("game", MODE_PRIVATE).edit().apply {
-            putLong("time", time)
-            putString("gameField", gameField)
+            putLong(PREF_TIME, time)
+            putString(PREF_GAME_FIELD, gameField)
             apply()
         }
     }
@@ -177,7 +175,7 @@ class GameActivity : AppCompatActivity() {
 
     private fun makeStepToUser(row: Int, column: Int) {
         if (isEmptyField(row, column)) {
-            makeStep(row, column, PLAYER_SYMBOL)
+            userMakeStep(row, column, PLAYER_SYMBOL)
 
             if (checkGameField(row, column, PLAYER_SYMBOL)) {
                 showGameStatus(STATUS_WIN_PLAYER)
@@ -380,6 +378,11 @@ class GameActivity : AppCompatActivity() {
 
         makeGameFieldUI("$row$column", symbol)
     }
+    private fun userMakeStep(row: Int, column: Int, symbol: String) {
+        gameField[row][column] = symbol
+
+        makeUserStepUI("$row$column", symbol)
+    }
 
     private fun makeGameFieldUI(position: String, symbol: String) {
         val drawable = when (symbol) {
@@ -391,36 +394,82 @@ class GameActivity : AppCompatActivity() {
         when (position) {
             "00" -> {
                 binding.imageView1.setImageResource(drawable)
+            }
+            "01" -> {
+                binding.imageView2.setImageResource(drawable)
+            }
+            "02" -> {
+                binding.imageView3.setImageResource(drawable)
+            }
+            "10" -> {
+                binding.imageView4.setImageResource(drawable)
+            }
+            "11" -> {
+                binding.imageView5.setImageResource(drawable)
+            }
+            "12" -> {
+                binding.imageView6.setImageResource(drawable)
+            }
+            "20" -> {
+                binding.imageView7.setImageResource(drawable)
+            }
+            "21" -> {
+                binding.imageView8.setImageResource(drawable)
+            }
+            "22" -> {
+                binding.imageView9.setImageResource(drawable)
+            }
+        }
+    }
+
+    private fun makeUserStepUI(position: String, symbol: String) {
+        val drawable = when (symbol) {
+            PLAYER_SYMBOL -> R.drawable.cross
+            BOT_SYMBOL -> R.drawable.zero
+            else -> return
+        }
+
+        when (position) {
+            "00" -> {
+                binding.imageView1.setImageResource(drawable)
                 binding.imageView1.startAnimation(animation)
             }
+
             "01" -> {
                 binding.imageView2.setImageResource(drawable)
                 binding.imageView2.startAnimation(animation)
             }
+
             "02" -> {
                 binding.imageView3.setImageResource(drawable)
                 binding.imageView3.startAnimation(animation)
             }
+
             "10" -> {
                 binding.imageView4.setImageResource(drawable)
                 binding.imageView4.startAnimation(animation)
             }
+
             "11" -> {
                 binding.imageView5.setImageResource(drawable)
                 binding.imageView5.startAnimation(animation)
             }
+
             "12" -> {
                 binding.imageView6.setImageResource(drawable)
                 binding.imageView6.startAnimation(animation)
             }
+
             "20" -> {
                 binding.imageView7.setImageResource(drawable)
                 binding.imageView7.startAnimation(animation)
             }
+
             "21" -> {
                 binding.imageView8.setImageResource(drawable)
                 binding.imageView8.startAnimation(animation)
             }
+
             "22" -> {
                 binding.imageView9.setImageResource(drawable)
                 binding.imageView9.startAnimation(animation)
@@ -557,5 +606,8 @@ class GameActivity : AppCompatActivity() {
 
         const val PLAYER_SYMBOL = "X"
         const val BOT_SYMBOL = "0"
+
+        const val PREF_TIME = "pref_time"
+        const val PREF_GAME_FIELD = "pref_game_field"
     }
 }

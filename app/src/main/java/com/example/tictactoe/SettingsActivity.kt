@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.SeekBar
+import android.widget.Toast
 import com.example.tictactoe.databinding.ActivitySettingBinding
 
 class SettingsActivity : AppCompatActivity() {
@@ -34,26 +35,27 @@ class SettingsActivity : AppCompatActivity() {
         settingsBinding.levelInGameSet.text = resources.getStringArray(R.array.game_level)[currentLevel]
         settingsBinding.seekBar.progress = currentVolumeSound
 
+
         when(currentSettings.rules){
-            1 -> settingsBinding.checkBoxHorizontal.isChecked = true
-            2 -> settingsBinding.checkBoxVertical.isChecked = true
+            1 -> settingsBinding.checkBoxHorizontal.toggle()
+            2 -> settingsBinding.checkBoxVertical.toggle()
             3 -> {
-                settingsBinding.checkBoxHorizontal.isChecked = true
-                settingsBinding.checkBoxVertical.isChecked = true
+                settingsBinding.checkBoxHorizontal.toggle()
+                settingsBinding.checkBoxVertical.toggle()
             }
-            4 -> settingsBinding.checkBoxDiagonal.isChecked = true
+            4 -> settingsBinding.checkBoxDiagonal.toggle()
             5 -> {
-                settingsBinding.checkBoxDiagonal.isChecked = true
-                settingsBinding.checkBoxHorizontal.isChecked = true
+                settingsBinding.checkBoxDiagonal.toggle()
+                settingsBinding.checkBoxHorizontal.toggle()
             }
             6 -> {
-                settingsBinding.checkBoxDiagonal.isChecked = true
-                settingsBinding.checkBoxVertical.isChecked = true
+                settingsBinding.checkBoxDiagonal.toggle()
+                settingsBinding.checkBoxVertical.toggle()
             }
             7 -> {
-                settingsBinding.checkBoxHorizontal.isChecked = true
-                settingsBinding.checkBoxVertical.isChecked = true
-                settingsBinding.checkBoxDiagonal.isChecked = true
+                settingsBinding.checkBoxHorizontal.toggle()
+                settingsBinding.checkBoxVertical.toggle()
+                settingsBinding.checkBoxDiagonal.toggle()
             }
         }
 
